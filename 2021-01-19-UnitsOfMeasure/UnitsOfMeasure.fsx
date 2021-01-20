@@ -1,10 +1,10 @@
-// What can you do
-
+// How to Define a Unit of Measure
 [<Measure>] type USD
 [<Measure>] type cm
 [<Measure>] type m
 [<Measure>] type gm
 [<Measure>] type kg
+
 
 // You can also declare products of Units
 [<Measure>] type N = kg / m^3
@@ -28,9 +28,11 @@ let a1 = 1<cm>
 let b1 = 10.0M<kg>
 
 // F# does not have implicit casting though so
-// you will need to convert the types. The downside is that
-// this will strip the units off of the number
-// let a2 = x1 + a1 // Will not work becuase numeric type is different
+// you will need to convert the types. The downside is
+// that this will strip the units off of the number
+
+// Will not work becuase numeric type is different
+// let a2 = x1 + a1 
 
 // Converting to float removes the units
 let a2 = float a1
